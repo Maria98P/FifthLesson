@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     background-color: bisque;
     font-family: Arial, Helvetica, sans-serif;
-   padding: 2%;
+   padding: 1%;
   
 }
 
@@ -17,6 +17,63 @@ body, html {
         height: 8vh;
         font-size: 2.5vw;
     }
+}
+
+.header{
+    display:flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1vh;
+    justify-content: space-around;
+   
+}
+.header #logo{
+    height: 5vh;
+    justify-self: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar a {
+ 
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 1vh;
+  }
+
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+
+  .active {
+    background-color: rgb(151, 121, 84);
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+
+  }
+
+
+#logo{
+    height: 5vh;
+    width: 5vh;
+   
 }
 
 .heroImage {
@@ -38,8 +95,7 @@ body, html {
     color: white;
     font-size: 1vw;
 }
-
-div>button{
+.heroImage #grab{
  color: black;
  background-color: bisque;  
  width: 10vw; 
@@ -64,20 +120,27 @@ img{
     padding-left: 2vh;
 }
 
+.paragraph1 p{
+    font-size: large;
+}
 .paragraph1{
-   
+    box-sizing: border-box; /*includes padding and borders in element'stotal width and height, so it doesnt overflow*/
     height:30vh;
-    margin: 0 auto; /* Center the element horizontally */
+    margin: 0 auto; 
     background-color: antiquewhite;
-   
-
+    padding: 1vw;
+    min-height: auto;
+    display : block; 
+    overflow-wrap: break-word;
+    /*overflow:auto means a scrollbar*/
+    max-width : 100%;
+    
+    
 }
 .paragraph2 p{
     column-count: 3;
-    column-width: 50vh;
-    font-size: large;
-    
-    
+    font-size: large;   
+   
 }
 
 
@@ -85,17 +148,57 @@ img{
 .paragraph2 {
     background-image: linear-gradient(100deg,rgba(240, 216, 151, 0), rgb(212, 176, 108));
     margin: 2vh;
-    padding: 0.1vh
-}
+    padding-bottom: 1vh;
+    display : block; 
+    overflow-wrap: break-word;
+    max-width : 100%;
+   
+}   
 
-.test h2{
+.test h2, 
+.testh4{
     text-align: center;
+    white-space: normal;
+    font-size: 3vw;
+    max-height: 30%;
 }
 
-.test h4{
+.formAndButton{
+    background-color: antiquewhite;
+    padding: 1vh;
+}
+
+#form1{
+ 
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+
+}
+
+.formItem{
+font-size: medium;
+width:fit-content;
+
+}
+
+#citySelect{
+    padding: 0.1vw;
+  }
+
+.formAndButton>button{
+    color: black;
+    background-color: rgb(151, 121, 84);  
+    width: 10vw; 
+    height: 7vh;
+    font-size: 1vw;
+    box-shadow: 2px 2px 60px -1vw  palegoldenrod;
+    font-size: medium;
+}
+
+footer{
     text-align: center;
+    margin-top: 10vh;
+   
 }
 
-.subscribeForm{
-    background-color: aqua ;
-}
